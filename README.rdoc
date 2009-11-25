@@ -23,7 +23,6 @@ Check out the code via git:
 
     # download altered_beast
     # gem install rails 2.3.3
-    $ mkdir log
     $ rake tmp:create
     $ rake app:bootstrap
 
