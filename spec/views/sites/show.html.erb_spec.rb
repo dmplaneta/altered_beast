@@ -9,8 +9,9 @@ describe "/sites/show.html.erb" do
 
     assigns[:site] = @site
   end
-
+  
   it "should render attributes in <p>" do
+    puts response.body
     render "/sites/show.html.erb"
   end
 end

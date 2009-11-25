@@ -20,6 +20,8 @@ describe TopicsController, "GET #index" do
     it_assigns :topics, :forum
     it_renders :xml
   end
+  
+  
 end
 
 describe TopicsController, "GET #show" do

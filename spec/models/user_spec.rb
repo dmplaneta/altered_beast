@@ -4,14 +4,14 @@ describe User do
   define_models :users
 
   describe User, "being created" do
-    define_models :users
+ #   define_models :users
   
     before do
       @creating_user = lambda do
-        user = create_user
+        user = create_user(:login => 'login', :email => 'normal-user@example.com', :password =>'testest', :password_confirmation => 'testest', :site_id => 1) 
         violated "#{user.errors.full_messages.to_sentence}" if user.new_record?
       end
-    end
+     end
   
     it 'logs in with openid' do
       u = sites(:default).users.new(:openid_url => 'http://foo', :email => 'zoe@girl.com')

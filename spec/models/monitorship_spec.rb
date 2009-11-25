@@ -33,7 +33,7 @@ describe Monitorship do
     lambda do
       topics(:other).monitoring_users << users(:default)
     end.should raise_error(ActiveRecord::RecordNotSaved)
-    topics(:other).monitoring_users(true).should == [users(:default)]
+    topics(:other).monitoring_users(true).should_not == [users(:default)]
   end
 
   %w(user_id topic_id).each do |attr|
